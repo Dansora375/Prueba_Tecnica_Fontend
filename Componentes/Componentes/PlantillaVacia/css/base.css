@@ -15,19 +15,56 @@
 }
 
 /* ========================================
+   DIRECTORIO - LAYOUT PRINCIPAL
+======================================== */
+main.detalle {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+.detalle .breadcrumb-class {
+  background: var(--unal-background);
+  padding: 10px 15px;
+  margin-bottom: 0;
+  display: none; /* Oculto según mockup */
+}
+
+/* ========================================
    DIRECTORIO - HERO SECTION
 ======================================== */
 .directorio-hero {
   background: linear-gradient(135deg, var(--unal-green-gradient-start) 0%, var(--unal-green-gradient-end) 100%);
+  background-image: url('../images/directorio_images/rectangle201216-o2tg-1500w.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
   padding: 60px 0;
   position: relative;
   overflow: hidden;
-  margin-top: 0;
+  margin: 0 !important;
+  width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+}
+
+.directorio-hero .container-fluid {
+  max-width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.directorio-hero .row {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
 }
 
 .directorio-hero__content {
   position: relative;
   z-index: 2;
+  padding-left: 50px;
 }
 
 .directorio-hero__title {
@@ -44,6 +81,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   padding-left: 2rem;
+  padding-right: 50px;
 }
 
 .directorio-hero__description p {
@@ -62,40 +100,54 @@
 
 .directorio-circle {
   position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  width: auto;
+  height: auto;
+  max-width: 120px;
+  max-height: 120px;
 }
 
 .circle-1 {
-  width: 120px;
-  height: 120px;
   top: 20%;
   left: 10%;
-  background: rgba(69, 179, 143, 0.3);
+  width: 120px;
 }
 
 .circle-2 {
-  width: 80px;
-  height: 80px;
-  top: 10%;
-  left: 25%;
-  background: rgba(69, 179, 143, 0.4);
-}
-
-.circle-3 {
-  width: 100px;
-  height: 100px;
   top: 50%;
   left: 15%;
-  background: rgba(69, 179, 143, 0.25);
+  width: 80px;
 }
 
-.circle-4 {
+.directorio-polygon {
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.polygon-1 {
+  top: 15%;
+  left: 25%;
   width: 60px;
-  height: 60px;
-  top: 70%;
+}
+
+.polygon-2 {
+  top: 40%;
+  left: 30%;
+  width: 80px;
+}
+
+.polygon-3 {
+  top: 65%;
+  left: 8%;
+  width: 70px;
+}
+
+.polygon-4 {
+  top: 30%;
   left: 5%;
-  background: rgba(69, 179, 143, 0.35);
+  width: 50px;
 }
 
 /* ========================================
@@ -140,6 +192,16 @@
 ======================================== */
 .directorio-search {
   background: var(--unal-background);
+  width: 100vw !important;
+  margin: 0 !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+}
+
+.directorio-search .container {
+  max-width: 1200px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .directorio-search__container {
@@ -185,6 +247,12 @@
   background: #3a9d7a;
 }
 
+.directorio-search__icon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
 .directorio-filter__select {
   background: var(--unal-green-primary);
   color: var(--unal-white);
@@ -205,6 +273,16 @@
 ======================================== */
 .directorio-content {
   background: var(--unal-white);
+  width: 100vw !important;
+  margin: 0 !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+}
+
+.directorio-content .container {
+  max-width: 1200px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .directorio-table-container {
@@ -285,6 +363,25 @@
   margin: 0 5px;
 }
 
+.directorio-pagination__arrow {
+  width: 12px;
+  height: 12px;
+  filter: brightness(0) saturate(100%) invert(56%) sepia(84%) saturate(370%) hue-rotate(120deg) brightness(95%) contrast(89%);
+}
+
+.directorio-pagination__arrow--left {
+  transform: rotate(180deg);
+  margin-right: 5px;
+}
+
+.directorio-pagination__arrow--right {
+  margin-left: 5px;
+}
+
+.directorio-pagination__btn:hover:not(:disabled) .directorio-pagination__arrow {
+  filter: brightness(0) invert(1);
+}
+
 /* ========================================
    DIRECTORIO - SECCIÓN DE CONTACTO
 ======================================== */
@@ -292,6 +389,16 @@
   background: var(--unal-dark-bg);
   padding: 60px 0;
   color: var(--unal-white);
+  width: 100vw !important;
+  margin: 0 !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+}
+
+.directorio-contact .container {
+  max-width: 1200px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .directorio-contact__card {
@@ -320,11 +427,12 @@
   gap: 15px;
 }
 
-.directorio-contact__item i {
-  color: var(--unal-green-primary);
-  font-size: 1.2rem;
+.directorio-contact__icon {
+  width: 20px;
+  height: 20px;
   margin-top: 2px;
   min-width: 20px;
+  filter: brightness(0) saturate(100%) invert(56%) sepia(84%) saturate(370%) hue-rotate(120deg) brightness(95%) contrast(89%);
 }
 
 .directorio-contact__chat-item {
@@ -333,6 +441,12 @@
   gap: 10px;
   margin-bottom: 15px;
   color: var(--unal-green-primary);
+}
+
+.directorio-contact__chat-icon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) saturate(100%) invert(56%) sepia(84%) saturate(370%) hue-rotate(120deg) brightness(95%) contrast(89%);
 }
 
 .directorio-contact__btn {
@@ -352,6 +466,12 @@
   background: #3a9d7a;
 }
 
+.directorio-contact__btn-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
 /* ========================================
    DIRECTORIO - RESPONSIVE
 ======================================== */
@@ -360,8 +480,18 @@
     font-size: 2.5rem;
   }
   
+  .directorio-hero__content {
+    padding-left: 15px;
+  }
+  
+  .directorio-hero .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
   .directorio-hero__description {
     padding-left: 0;
+    padding-right: 15px;
     margin-top: 2rem;
   }
   
@@ -380,6 +510,13 @@
   
   .directorio-table {
     min-width: 600px;
+  }
+  
+  .directorio-search .container,
+  .directorio-content .container,
+  .directorio-contact .container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
