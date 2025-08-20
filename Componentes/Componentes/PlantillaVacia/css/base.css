@@ -23,9 +23,12 @@
   --unal-text-light: #666666;
   --unal-border: #e0e0e0;
   --unal-white: #ffffff;
-  --unal-background: rgba(241, 247, 247, 1);
+  --unal-background: #F1F7F7;
+  --unal-footer-bg: #052222;
   --unal-dark-bg: #1a2e2e;
 }
+
+  
 
 
 /* ========================================
@@ -377,6 +380,7 @@
   
   .directorio-table-container {
     overflow-x: auto;
+    
   }
   
   .directorio-table {
@@ -430,7 +434,7 @@
 
 .directorio-search {
   width: 100vw;
-  background: #fff;
+  background: var(--unal-background);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -453,21 +457,26 @@
   display: flex;
   align-items: center;
   border-radius: 30px;
-  background: #fff;
-  box-shadow: 0 4px 24px rgba(69,179,143,0.12);
-  border: 2px solid var(--unal-green-primary);
-  padding: 0 8px;
+  background: #f8f9fa;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid #e0e0e0;
+  padding: 8px 16px;
   margin-bottom: 24px;
 }
 
 .directorio-search__input {
   flex: 1;
   border: none;
-  padding: 18px 24px;
-  font-size: 18px;
+  padding: 12px 16px;
+  font-size: 16px;
   font-family: 'Ancizar Sans', sans-serif;
   background: transparent;
   color: var(--unal-text-dark);
+  outline: none;
+}
+
+.directorio-search__input::placeholder {
+  color: #999;
 }
 
 .directorio-search__input:focus {
@@ -477,13 +486,15 @@
 .directorio-search__btn {
   background: var(--unal-green-primary);
   border: none;
-  padding: 0 18px;
-  height: 48px;
+  padding: 12px;
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 50%;
   cursor: pointer;
   transition: background 0.3s;
+  width: 40px;
+  height: 40px;
 }
 
 .directorio-search__btn:hover {
@@ -491,34 +502,48 @@
 }
 
 .directorio-search__icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 /* Filtros */
 
 .directorio-filter__select {
-  border-radius: 30px;
-  border: 2px solid var(--unal-green-primary);
-  padding: 14px 28px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  padding: 12px 20px;
   font-family: 'Ancizar Sans', sans-serif;
   font-size: 16px;
-  background: #fff;
-  color: var(--unal-text-dark);
+  background: var(--unal-green-primary);
+  color: #ffffff;
   margin-bottom: 24px;
-  box-shadow: 0 2px 12px rgba(69,179,143,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  padding-right: 45px;
+  justify-content: left;
 }
 
 .directorio-filter__select:focus {
   border-color: var(--unal-green-primary);
   box-shadow: 0 0 0 0.2rem rgba(69, 179, 143, 0.18);
+  outline: none;
+}
+
+.directorio-filter__select option {
+  background: #ffffff;
+  color: var(--unal-text-dark);
 }
 
 /* Tabla del directorio */
 
 .directorio-content {
   width: 100vw;
-  background: #fff;
+  background: var(--unal-background);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -531,40 +556,63 @@
   max-width: 1000px;
   margin: 0 auto;
   background: #fff;
-  border-radius: 24px;
-  box-shadow: 0 6px 32px rgba(69,179,143,0.14);
+  border-radius: 32px;
+  /* box-shadow: 0 8px 32px rgba(69,179,143,0.10);   */
   overflow-x: auto;
-  padding: 0;
-}
-
-.directorio-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: 0;
-}
-
-.directorio-table thead th {
-  background: var(--unal-green-primary);
-  color: #fff;
-  padding: 18px 24px;
-  font-weight: 700;
-  font-family: 'Ancizar Sans', sans-serif;
-  text-align: left;
+  padding: 0 0 0 0;
   border: none;
-  font-size: 18px;
+}
+
+
+/* Estilos limpios para la tabla del directorio */
+.directorio-table {
+  border-collapse: collapse;
+  width: 100%;
+  background: transparent;
+}
+
+.directorio-table thead  th {
+
+  color: var(--unal-green-primary);
+  font-weight: 600;
+  font-family: 'Ancizar Sans', sans-serif;
+  padding: 16px 24px;
+  text-align: center;
+  border: none;
+  font-size: 16px; 
+  background: var(--unal-background);
+}
+
+.directorio-table th,
+.directorio-table td {
+  border: none;
+  /* background: var(--unal-green-primary); */
+  padding: 16px 24px;
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Ancizar Sans', sans-serif;
 }
 
 .directorio-table tbody td {
   padding: 16px 24px;
-  border-bottom: 1px solid var(--unal-border);
+  /* border-bottom: 1px solid var(--unal-background); */
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+
   font-family: 'Ancizar Sans', sans-serif;
   color: var(--unal-text-dark);
+  /* color:red; */
   font-size: 16px;
+  background: var(--unal-background);
+  outline: none;
 }
 
 .directorio-table tbody tr {
   transition: background 0.2s;
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
 .directorio-table tbody tr:hover {
@@ -588,29 +636,41 @@
 }
 
 .directorio-pagination__btn {
-  background: #ffffff;
-  border: 2px solid var(--unal-green-primary);
-  color: var(--unal-green-primary);
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-family: 'Ancizar Sans', sans-serif;
-  font-weight: 500;
+  background: var(--unal-background);
+  /* border: 2px solid var(--unal-green-primary); */
+  /* color: var(--unal-green-primary); */
+  /* padding: 10px 20px; */
+  /* border-radius: 25px; */
+  border: none;
+ ;
+  /* font-weight: 500; */
   display: flex;
   align-items: center;
-  gap: 8px;
+  
   transition: all 0.3s ease;
 }
 
 .directorio-pagination__btn:hover:not(:disabled) {
-  background: var(--unal-green-primary);
-  color: #ffffff;
+  /* background: var(--unal-green-primary); */
+  /* color: #ffffff; */
 }
 
 .directorio-pagination__btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
+.directorio-pagination__btn img {
+  display: inline-block;
+  width: 20px; /* ajustar si hace falta */
+  height: 20px;
+  transition: filter 0.25s ease, transform 0.2s ease, opacity 0.2s ease;
+  filter: none;
+}
 
+.directorio-pagination__btn:hover img {
+  filter: brightness(0.8);
+  transform: scale(1.1);
+}
 .directorio-pagination__arrow {
   width: 16px;
   height: 16px;
@@ -633,22 +693,63 @@
 
 /* Sección de contacto */
 .directorio-contact {
-  background: var(--unal-green-light);
-  padding: 60px 0;
+  background: var(--unal-dark-bg);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw 0 2vw 0;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-bottom: 0;
+}
+
+.directorio-contact .container {
+  max-width: 1400px; /* Limitar ancho máximo */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .directorio-contact__card {
-  background: #ffffff;
+  background: var(--unal-green-primary);
   border-radius: 15px;
-  padding: 30px;
+  padding-left: clamp(300px, 8vw, 120px); /* Padding responsive para la barra verde */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   height: 100%;
+  display: flex;
+  min-height: 280px; /* Altura mínima */
+  max-width: 100%; /* Limitar ancho máximo */
+  position: relative; /* Para posicionamiento del rectángulo verde */
+}
+
+.directorio-contact_info{
+  padding: clamp(16px, 3vw, 32px); /* Padding responsive */
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: var(--unal-background);
+  width: 100%;
 }
 
 .directorio-contact__card--small {
-  padding: 25px;
+  background: var(--unal-background);
+  border-radius: 15px;
+  padding: clamp(20px, 3vw, 40px); /* Padding responsive */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 16px;
+  display: block;
 }
 
+.directorio-contact__card--inline {
+  display: inline-block;
+  width: 100%;
+}
+.directorio-contact__card--inline button {
+  display: inline-block;
+  
+}
 .directorio-contact__header h3 {
   color: var(--unal-green-primary);
   font-family: 'Ancizar Sans', sans-serif;
@@ -661,8 +762,9 @@
   color: var(--unal-green-primary);
   font-family: 'Ancizar Sans', sans-serif;
   font-weight: 600;
-  margin-bottom: 20px;
-  font-size: 18px;
+  margin-bottom: 16px;
+  font-size: 20px;
+  text-align: left;
 }
 
 .directorio-contact__item {
@@ -681,41 +783,134 @@
 
 .directorio-contact__item div {
   font-family: 'Ancizar Sans', sans-serif;
-  color: var(--unal-text-dark);
+  color: var(--unal-green-primary);
   line-height: 1.5;
 }
+
+
 
 .directorio-contact__chat-item {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-family: 'Ancizar Sans', sans-serif;
   color: var(--unal-text-dark);
+  font-size: 16px;
+  padding: 8px 0;
 }
 
 .directorio-contact__chat-icon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
 .directorio-contact__btn {
   background: var(--unal-green-primary);
   border: none;
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 15px;
+  padding: 20px;
   width: 100%;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .directorio-contact__btn:hover {
   background: #3a9a7a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(69, 179, 143, 0.3);
 }
 
 .directorio-contact__btn-icon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1);
 }
+
+/* ========================================
+   CLASES RESPONSIVAS PERSONALIZADAS
+======================================== */
+
+/* Clase responsive para espaciado entre columnas */
+.responsive-spacing {
+  margin-bottom: clamp(8px, 2vw, 24px);
+}
+
+/* Media queries para espaciado responsive */
+@media (min-width: 1200px) {
+  .responsive-spacing {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .responsive-spacing {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .responsive-spacing {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+  .responsive-spacing {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .responsive-spacing {
+    margin-bottom: 8px;
+  }
+}
+
+/* Media queries específicas para pantallas muy grandes */
+@media (min-width: 1600px) {
+  .directorio-contact .container {
+    max-width: 1600px;
+    padding: 0 60px;
+  }
+  
+  .directorio-contact__card {
+    max-width: 600px; /* Limitar ancho de las tarjetas */
+  }
+  
+  .directorio-contact__card--small {
+    max-width: 100%;
+    margin: 0 auto 20px auto; /* Centrar las tarjetas pequeñas */
+  }
+}
+
+@media (min-width: 1920px) {
+  .directorio-contact .container {
+    max-width: 1800px;
+    padding: 0 100px;
+  }
+  
+  .directorio-contact {
+    padding: 60px 0; /* Más padding en pantallas muy grandes */
+  }
+  
+  .directorio-contact__card {
+    max-width: 700px;
+  }
+}
+
+/* ========================================
+   FIN CLASES RESPONSIVAS
+======================================== */
+/* .directorio-table th {
+  font-weight: bold;
+}
+
+.directorio-table tbody tr:hover td {
+  background: rgba(69, 179, 143, 0.08);
+} */

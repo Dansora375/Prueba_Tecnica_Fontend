@@ -487,10 +487,7 @@
       <!-- Elementos gráficos decorativos -->
       <div class="directorio-hero__graphics">
         <img src="images/directorio_images/ellipse51245-4ii-200h.png" alt="" class="directorio-ellipse5">
-        <img src="images/directorio_images/polygon5i127-3zrd.svg" alt="" class="directorio-polygon directorio-polygon51">
-        <img src="images/directorio_images/polygon5i127-4n6q.svg" alt="" class="directorio-polygon directorio-polygon52">
-        <img src="images/directorio_images/polygon5i127-juekp.svg" alt="" class="directorio-polygon directorio-polygon53">
-        <img src="images/directorio_images/polygon6i127-u81c.svg" alt="" class="directorio-polygon directorio-polygon6">
+       
       </div>
     </section>
 
@@ -510,40 +507,38 @@
     <!-- Sección de búsqueda y filtros -->
     <section class="directorio-search py-4">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
             <div class="directorio-search__container">
               <div class="directorio-search__input-group">
-                <input type="text" class="form-control directorio-search__input" placeholder="Buscar un contacto de la Dirección Financiera y Administrativa Sede Bogotá">
-                <button class="btn directorio-search__btn" type="button">
-                  <img src="images/directorio_images/lupa2x1i125-jalf-200h.png" alt="Buscar" class="directorio-search__icon">
+                <input type="text" class="directorio-search__input" placeholder="Buscar un contacto de la Dirección Financiera y Administrativa Sede Bogotá" id="searchInput">
+                <button class="directorio-search__btn" type="button" onclick="searchDirectory()">
+                  <svg class="directorio-search__icon" fill="white" viewBox="0 0 24 24">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                  </svg>
                 </button>
               </div>
             </div>
           </div>
         </div>
         
-        <div class="row mt-3">
-          <div class="col-md-3">
-            <div class="directorio-filter">
-              <select class="form-control directorio-filter__select">
-                <option>División/Sección</option>
-                <option>Dirección Financiera</option>
-                <option>Dirección Administrativa</option>
-                <option>Contabilidad</option>
-                <option>Presupuesto</option>
-              </select>
-            </div>
+        <div class="row mt-3 ">
+          <div class="col-md-4">
+            <select class="directorio-filter__select" id="divisionFilter" onchange="filterByDivision()">
+              <option value="">División/Sección</option>
+              <option value="Dirección Financiera">Dirección Financiera</option>
+              <option value="Dirección Administrativa">Dirección Administrativa</option>
+              <option value="Contabilidad">Contabilidad</option>
+              <option value="Presupuesto">Presupuesto</option>
+            </select>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Tabla del directorio -->
+    </section>    <!-- Tabla del directorio -->
     <section class="directorio-content py-4">
       <div class="container">
         <div class="directorio-table-container">
-          <table class="table directorio-table">
+          <table class="directorio-table" id="directoryTable">
             <thead>
               <tr>
                 <th>Cargo</th>
@@ -553,42 +548,8 @@
                 <th>Extensión</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>Director</td>
-                <td>Juan Carlos Pérez</td>
-                <td>Dirección Financiera</td>
-                <td>jcperez@unal.edu.co</td>
-                <td>12345</td>
-              </tr>
-              <tr>
-                <td>Subdirector</td>
-                <td>María Elena García</td>
-                <td>Dirección Administrativa</td>
-                <td>megarcia@unal.edu.co</td>
-                <td>12346</td>
-              </tr>
-              <tr>
-                <td>Coordinador</td>
-                <td>Carlos Andrés Rodríguez</td>
-                <td>Contabilidad</td>
-                <td>carodriguez@unal.edu.co</td>
-                <td>12347</td>
-              </tr>
-              <tr>
-                <td>Analista</td>
-                <td>Ana María López</td>
-                <td>Presupuesto</td>
-                <td>amlopez@unal.edu.co</td>
-                <td>12348</td>
-              </tr>
-              <tr>
-                <td>Asistente</td>
-                <td>Pedro Antonio Martínez</td>
-                <td>Dirección Financiera</td>
-                <td>pamartinez@unal.edu.co</td>
-                <td>12349</td>
-              </tr>
+            <tbody id="tableBody">
+              <!-- Los datos se cargan dinámicamente con JavaScript -->
             </tbody>
           </table>
         </div>
@@ -596,15 +557,19 @@
         <!-- Paginación -->
         <div class="directorio-pagination">
           <div class="directorio-pagination__container">
-            <button class="btn directorio-pagination__btn" disabled>
-              <img src="images/directorio_images/flecha11237-64o-200h.png" alt="Anterior" class="directorio-pagination__arrow directorio-pagination__arrow--left"> Anterior
+            <button class="directorio-pagination__btn" id="prevBtn" onclick="previousPage()" disabled>
+              <!-- <svg class="directorio-pagination__arrow" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+              </svg> -->
+              <img src="images/directorio_images/vector121254-2p9.svg" alt="">
+              
             </button>
-            <span class="directorio-pagination__info">
-              <span class="directorio-pagination__current">1</span>
-              de 100
-            </span>
-            <button class="btn directorio-pagination__btn">
-              <img src="images/directorio_images/flecha11237-64o-200h.png" alt="Siguiente" class="directorio-pagination__arrow directorio-pagination__arrow--right">
+            <div class="directorio-pagination__info">
+              <span class="directorio-pagination__current" id="currentPage">1</span> de <span id="totalPages">100</span>
+            </div>
+            <button class="directorio-pagination__btn" id="nextBtn" onclick="nextPage()">
+              
+             <img src="images/directorio_images/vector161255-74y5.svg " alt="">
             </button>
           </div>
         </div>
@@ -617,7 +582,9 @@
         <div class="row">
           <div class="col-lg-6 col-md-12 mb-4">
             <div class="directorio-contact__card">
-              <div class="directorio-contact__header">
+
+              <div class="directorio-contact_info">
+                <div class="directorio-contact__header">
                 <h3>Dirección Financiera y Administrativa.</h3>
               </div>
               <div class="directorio-contact__content">
@@ -644,6 +611,12 @@
                     <strong>Correo Electrónico:</strong><br>
                     dirfinadmin_bog@unal.edu.co
                   </div>
+
+
+
+
+              </div>
+              
                 </div>
               </div>
             </div>
@@ -651,7 +624,7 @@
           
           <div class="col-lg-6 col-md-12">
             <div class="row">
-              <div class="col-12 mb-3">
+              <div class="col-12">
                 <div class="directorio-contact__card directorio-contact__card--small">
                   <h4>Chats de atención virtual</h4>
                   <div class="directorio-contact__chat-item">
@@ -665,10 +638,10 @@
                 </div>
               </div>
               <div class="col-12">
-                <div class="directorio-contact__card directorio-contact__card--small">
+                <div class="directorio-contact__card directorio-contact__card--small directorio-contact__card--inline">
                   <h4>Directorio.</h4>
                   <button class="btn directorio-contact__btn">
-                    <img src="images/directorio_images/directorio12x11209-q8qla-800h.png" alt="Directorio" class="directorio-contact__btn-icon">
+                    <img src="images/directorio_images/flecha11237-64o-200h.png" alt="Directorio" class="directorio-contact__btn-icon">
                   </button>
                 </div>
               </div>
@@ -771,6 +744,7 @@
 
   <script src="js/simpleParallax.min.js"></script>
   <script src="js/base.js"></script>
+  <script src="js/directorio.js"></script>
   <!-- swiper carousel---------------------------------------- -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./Resources/Public/js/scripts.js"></script>
