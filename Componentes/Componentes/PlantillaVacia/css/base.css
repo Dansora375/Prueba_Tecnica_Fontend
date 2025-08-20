@@ -24,6 +24,8 @@
   --unal-border: #e0e0e0;
   --unal-white: #ffffff;
   --unal-background: #F1F7F7;
+  --unal-background-search-input: #D9E5ED;
+  --unal-background-search-input: #D9E5ED;
   --unal-footer-bg: #052222;
   --unal-dark-bg: #1a2e2e;
 }
@@ -50,7 +52,7 @@
 
 
 /* ========================================
-   DIRECTORIO - HERO SECTION (Compatible con unal.css)
+   DIRECTORIO - HERO SECTION 
 ======================================== */
 .directorio-hero {
   width: 100vw;
@@ -60,19 +62,16 @@
   overflow: hidden;
   position: relative;
   align-items: flex-start;
-  flex-shrink: 0;
   background-color: var(--unal-background);
-  /* Usar 100vw y márgenes para salir del contenedor */
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   padding: 60px 10% 40px 10%;
+  /* object-fit: cover; */
 }
 
 /* Imagenes de fondo decorativas - responsivas */
 .directorio-agencia-unal020223181 {
   top: -200px;
-  /* agregar media query para que cuando se reduzca la pantalla a menos pixeles el top sea 0px */
-  
   left: -0.5%;
   width: 100%;
   height: auto;
@@ -80,6 +79,7 @@
   object-fit: cover;
   z-index: 0;
 }
+
 @media (max-width: 1440px) {
     .directorio-agencia-unal020223181{
       top: 0px;
@@ -98,9 +98,9 @@
 }
 
 .directorio-directorio22x1 {
-  /* top: -10px;
-  left: -10px; */
-  /* padding-left:-10vw ; */
+  top: -10px;
+  left: -10px;
+
   max-width: 100%;
   height: auto ;
   z-index: 2;
@@ -307,22 +307,23 @@
   background: transparent;
   border: 2px solid transparent;
   display: flex;
-  align-items: wrap;
+  align-items: center;
   justify-content: center;
   box-sizing: border-box;
   /* Responsive width and height */
-  width: clamp(15px, 10vw, 90px);
-  height: clamp(30px, 5vw, 80px); /* Aumentar altura para permitir más líneas */
+  width: clamp(15px, 10vw, 130px);
+  height: clamp(30px, 5vw, 40px); /* Aumentar altura para permitir más líneas */
   
   word-wrap: break-word; /* Romper palabras largas si es necesario */
   hyphens: auto; /* Agregar guiones automáticos */
 }
 
+
 .directorio-nav__item:hover {
   color: #02634C;
   text-decoration: none;
   /* border-color: rgba(255, 255, 255, 0.4); */
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .directorio-nav__item.active {
@@ -330,7 +331,7 @@
   color: #02634C;
   text-decoration: none;
   /* border-color: rgba(255, 255, 255, 0.4); */
-  font-weight: 600;
+  /* font-weight: 600; */
   /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
 
@@ -450,10 +451,12 @@
 .directorio-search__container {
   width: 100%;
   max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  max-height: 80px;
+  margin:  30px 0;
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .directorio-search__input-group {
@@ -461,11 +464,11 @@
   display: flex;
   align-items: center;
   border-radius: 30px;
-  background: #f8f9fa;
+  background: var(--unal-background-search-input);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border: 1px solid #e0e0e0;
-  padding: 8px 16px;
-  margin-bottom: 24px;
+  padding: 0px 16px;
+  /* margin-bottom: 44px; */
 }
 
 .directorio-search__input {
@@ -475,7 +478,7 @@
   font-size: 16px;
   font-family: 'Ancizar Sans', sans-serif;
   background: transparent;
-  color: var(--unal-text-dark);
+  color: #041A1A36; 
   outline: none;
 }
 
@@ -490,7 +493,7 @@
 .directorio-search__btn {
   background: var(--unal-green-primary);
   border: none;
-  padding: 12px;
+  /* padding: 12px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -499,15 +502,27 @@
   transition: background 0.3s;
   width: 40px;
   height: 40px;
+  box-sizing: border-box;
+  margin-left: 10px;
 }
+.directorio-search__btn svg,
+.directorio-search__icon {
+  width: 27px;           /* tamaño visual del icono — aumentar o disminuir */
+  height: 27px;
+  display: block;        /* evita espacios de línea y centrado incorrecto */
+  flex-shrink: 0;
+  
+}
+
+
 
 .directorio-search__btn:hover {
   background: #3a9a7a;
 }
 
 .directorio-search__icon {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 30px;
 }
 
 /* Filtros */
