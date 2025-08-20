@@ -1,94 +1,172 @@
 /* ========================================
-   DIRECTORIO - VARIABLES CSS
+   DIRECTORIO - VARIABLES CSS (Figma Based)
 ======================================== */
 :root {
+  --dl-color-theme-primary1: #BF4408;
+  --dl-color-theme-primary2: #E65103;
+  --dl-color-theme-accent1: #FFFFFF;
+  --dl-color-theme-accent2: #F5D1B0;
+  --dl-color-theme-secondary1: #FFFFFF;
+  --dl-color-theme-secondary2: #FBF1EB;
+  --dl-color-theme-neutral-dark: #191818;
+  --dl-color-theme-neutral-light: #FBFAF9;
+  --dl-layout-size-maxwidth: 1400px;
+  --dl-layout-space-unit: 16px;
+  --dl-layout-space-twounits: 32px;
+  --dl-layout-space-threeunits: 48px;
+  --dl-layout-space-fourunits: 64px;
+  --dl-layout-space-fiveunits: 80px;
+  --dl-layout-radius-cardradius: 8px;
   --unal-green-primary: #45b38f;
   --unal-green-light: rgba(69, 179, 143, 0.1);
-  --unal-green-gradient-start: #7dd3fc;
-  --unal-green-gradient-end: #45b38f;
   --unal-text-dark: #333333;
   --unal-text-light: #666666;
   --unal-border: #e0e0e0;
   --unal-white: #ffffff;
-  --unal-background: #f8f9fa;
+  --unal-background: rgba(241, 247, 247, 1);
   --unal-dark-bg: #1a2e2e;
 }
+
 
 /* ========================================
    DIRECTORIO - LAYOUT PRINCIPAL
 ======================================== */
-main.detalle {
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  max-width: 100% !important;
+
+/* Panel de accesibilidad - solo ajustes menores para no interferir */
+#letrasdfa2 {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Ancizar sans';
+  font-style: normal;
+  padding: 5px 5% 5px 0px;
+  text-align: right;
+  background: rgba(69, 179, 143, 1);
 }
 
+#pestania-accesibilidad {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+/* Solo los estilos específicos para el directorio que NO están en unal.css */
 .detalle .breadcrumb-class {
-  background: var(--unal-background);
-  padding: 10px 15px;
-  margin-bottom: 0;
   display: none; /* Oculto según mockup */
 }
 
 /* ========================================
-   DIRECTORIO - HERO SECTION
+   DIRECTORIO - HERO SECTION (Compatible con unal.css)
 ======================================== */
 .directorio-hero {
-  background: linear-gradient(135deg, var(--unal-green-gradient-start) 0%, var(--unal-green-gradient-end) 100%);
-  background-image: url('../images/directorio_images/rectangle201216-o2tg-1500w.png');
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: overlay;
-  padding: 60px 0;
-  position: relative;
+  width: 100vw;
+  min-height: 500px;
+  display: flex;
   overflow: hidden;
-  margin: 0 !important;
-  width: 100vw !important;
-  margin-left: calc(-50vw + 50%) !important;
-  margin-right: calc(-50vw + 50%) !important;
-}
-
-.directorio-hero .container-fluid {
-  max-width: 100%;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-.directorio-hero .row {
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
-}
-
-.directorio-hero__content {
   position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: var(--unal-background);
+  /* Usar 100vw y márgenes para salir del contenedor */
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 60px 10% 40px 10%;
+}
+
+/* Imagenes de fondo decorativas - responsivas */
+.directorio-agencia-unal020223181 {
+  top: 0px;
+  left: -2%;
+  width: 110%;
+  height: auto;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.directorio-directorio12x1 {
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  position: absolute;
+  object-fit: cover;
+}
+
+.directorio-directorio22x1 {
+  top: 30px;
+  left: 1%;
+  width: 90%;
+  height: auto;
   z-index: 2;
-  padding-left: 50px;
+  position: absolute;
+  object-fit: cover;
 }
 
-.directorio-hero__title {
-  font-family: 'Ancizar serif', serif;
-  font-size: 4rem;
-  font-weight: bold;
-  color: var(--unal-text-dark);
-  margin-bottom: 2rem;
-  line-height: 1.2;
+/* Barra superior verde */
+.directorio-rectangle2 {
+  top: -38px;
+  left: -10%;
+  width: 120%;
+  height: 38px;
+  z-index: 4;
+  position: absolute;
+  background-color: var(--unal-green-primary);
 }
 
-.directorio-hero__description {
-  color: var(--unal-text-dark);
-  font-size: 1.1rem;
-  line-height: 1.6;
-  padding-left: 2rem;
-  padding-right: 50px;
+/* Texto "Dirección Financiera y Administrativa - Sede Bogotá" */
+.directorio-text10 {
+  top: -33px;
+  right: 10%;
+  color: var(--dl-color-theme-accent1);
+  width: auto;
+  max-width: 50%;
+  height: auto;
+  z-index: 5;
+  position: absolute;
+  font-size: clamp(14px, 1.2vw, 20px);
+  font-style: normal;
+  text-align: right;
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 400;
+  line-height: 120%;
 }
 
-.directorio-hero__description p {
-  margin-bottom: 1rem;
+/* Título "Directorio" */
+.directorio-text11 {
+  top: 20px;
+  left: 5%;
+  color: var(--dl-color-theme-neutral-dark);
+  width: 40%;
+  height: auto;
+  z-index: 6;
+  position: absolute;
+  font-size: clamp(48px, 6vw, 78px);
+  font-style: normal;
+  text-align: left;
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 700;
+  line-height: 120%;
 }
 
-/* Elementos gráficos decorativos */
+/* Descripción del directorio */
+.directorio-text14 {
+  top: 20px;
+  right: 5%;
+  left: 50%;
+  color: var(--dl-color-theme-neutral-dark);
+  width: 45%;
+  height: auto;
+  z-index: 7;
+  position: absolute;
+  font-size: clamp(18px, 2vw, 26px);
+  font-style: normal;
+  text-align: left;
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+/* Elementos gráficos decorativos del hero - responsivos */
 .directorio-hero__graphics {
   position: absolute;
   top: 0;
@@ -96,228 +174,408 @@ main.detalle {
   width: 100%;
   height: 100%;
   pointer-events: none;
+  z-index: 3;
 }
 
-.directorio-circle {
-  position: absolute;
-  width: auto;
+.directorio-ellipse5 {
+  top: 15%;
+  left: 35%;
+  width: clamp(120px, 15vw, 200px);
   height: auto;
-  max-width: 120px;
-  max-height: 120px;
+  z-index: 3;
+  position: absolute;
 }
 
-.circle-1 {
-  top: 20%;
-  left: 10%;
-  width: 120px;
-}
-
-.circle-2 {
-  top: 50%;
-  left: 15%;
-  width: 80px;
-}
-
+/* Polígonos decorativos - responsivos */
 .directorio-polygon {
   position: absolute;
-  width: auto;
+  z-index: 3;
+  width: clamp(30px, 4vw, 60px);
   height: auto;
-  max-width: 100px;
-  max-height: 100px;
 }
 
-.polygon-1 {
-  top: 15%;
-  left: 25%;
-  width: 60px;
+.directorio-polygon51 {
+  top: 10%;
+  right: 8%;
 }
 
-.polygon-2 {
-  top: 40%;
-  left: 30%;
-  width: 80px;
+.directorio-polygon52 {
+  top: 35%;
+  right: 15%;
 }
 
-.polygon-3 {
-  top: 65%;
-  left: 8%;
-  width: 70px;
+.directorio-polygon53 {
+  top: 55%;
+  right: 25%;
 }
 
-.polygon-4 {
-  top: 30%;
-  left: 5%;
-  width: 50px;
+.directorio-polygon6 {
+  top: 25%;
+  right: 12%;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .directorio-hero {
+    min-height: 400px;
+    flex-direction: column;
+    padding: 40px 15px 30px 15px;
+  }
+  
+  .directorio-text11 {
+    top: 60px;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .directorio-text14 {
+    top: 140px;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .directorio-text10 {
+    right: 15px;
+    max-width: 70%;
+  }
+  
+  .directorio-ellipse5 {
+    top: 25%;
+    left: 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .directorio-hero {
+    min-height: 350px;
+    padding: 30px 10px 20px 10px;
+  }
+  
+  .directorio-text11 {
+    top: 50px;
+  }
+  
+  .directorio-text14 {
+    top: 120px;
+  }
+  
+  .directorio-polygon {
+    width: clamp(20px, 3vw, 40px);
+  }
 }
 
 /* ========================================
-   DIRECTORIO - NAVEGACIÓN HORIZONTAL
+   DIRECTORIO - NAVEGACIÓN HORIZONTAL (Compatible con unal.css)
 ======================================== */
-.directorio-nav {
-  background: rgba(69, 179, 143, 0.9);
+.directorio-menu {
+  width: 100vw;
+  background: rgba(69, 179, 143, 0.95);
   border-radius: 50px;
-  padding: 15px 30px;
-  margin-top: 40px;
+  padding: 20px 0;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: -30px;
   backdrop-filter: blur(10px);
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(69, 179, 143, 0.3);
 }
 
 .directorio-nav__menu {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .directorio-nav__item {
-  color: var(--unal-white);
+  color: #ffffff;
   text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
   font-weight: 500;
+  font-family: 'Ancizar Sans', sans-serif;
   transition: all 0.3s ease;
   white-space: nowrap;
+  text-align: center;
+  min-width: 120px;
+  background: transparent;
+  border: 2px solid transparent;
 }
 
-.directorio-nav__item:hover,
-.directorio-nav__item.active {
-  background: rgba(255, 255, 255, 0.2);
-  color: var(--unal-white);
+.directorio-nav__item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
   text-decoration: none;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.directorio-nav__item.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  text-decoration: none;
+  border-color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* ========================================
-   DIRECTORIO - BÚSQUEDA Y FILTROS
+   DIRECTORIO - RESPONSIVE ADICIONAL (Solo lo que no está en unal.css)
 ======================================== */
-.directorio-search {
-  background: var(--unal-background);
-  width: 100vw !important;
-  margin: 0 !important;
-  margin-left: calc(-50vw + 50%) !important;
-  margin-right: calc(-50vw + 50%) !important;
+@media (max-width: 768px) {
+  .directorio-hero {
+    min-height: 400px;
+    flex-direction: column;
+    padding: 40px 5% 30px 5%;
+  }
+  
+  .directorio-text11 {
+    top: 60px;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .directorio-text14 {
+    top: 140px;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .directorio-ellipse5 {
+    top: 25%;
+    left: 20%;
+  }
+  
+  .directorio-menu {
+    padding: 15px 0;
+    border-radius: 30px;
+  }
+  
+  .directorio-nav__menu {
+    gap: 15px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+  
+  .directorio-nav__item {
+    font-size: 14px;
+    padding: 10px 18px;
+    min-width: 100px;
+    border-radius: 20px;
+  }
+  
+  .directorio-table-container {
+    overflow-x: auto;
+  }
+  
+  .directorio-table {
+    min-width: 600px;
+  }
 }
 
-.directorio-search .container {
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+@media (max-width: 480px) {
+  .directorio-hero {
+    min-height: 350px;
+    padding: 30px 2% 20px 2%;
+  }
+  
+  .directorio-text11 {
+    top: 50px;
+  }
+  
+  .directorio-text14 {
+    top: 120px;
+  }
+  
+  .directorio-polygon {
+    width: clamp(20px, 3vw, 40px);
+  }
+  
+  .directorio-menu {
+    padding: 12px 0;
+    border-radius: 25px;
+    margin-top: -20px;
+  }
+  
+  .directorio-nav__menu {
+    gap: 8px;
+    padding: 0 15px;
+    justify-content: center;
+  }
+  
+  .directorio-nav__item {
+    font-size: 12px;
+    padding: 8px 14px;
+    min-width: 80px;
+    border-radius: 15px;
+  }
+}
+
+/* ========================================
+   DIRECTORIO - SECCIONES ADICIONALES
+======================================== */
+
+/* Sección de búsqueda */
+
+.directorio-search {
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 0 0;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }
 
 .directorio-search__container {
-  max-width: 800px;
+  width: 100%;
+  max-width: 900px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .directorio-search__input-group {
-  position: relative;
+  width: 100%;
   display: flex;
+  align-items: center;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(69,179,143,0.12);
+  border: 2px solid var(--unal-green-primary);
+  padding: 0 8px;
+  margin-bottom: 24px;
 }
 
 .directorio-search__input {
-  border: 2px solid var(--unal-border);
-  border-radius: 25px;
-  padding: 12px 50px 12px 20px;
-  font-size: 1rem;
   flex: 1;
+  border: none;
+  padding: 18px 24px;
+  font-size: 18px;
+  font-family: 'Ancizar Sans', sans-serif;
+  background: transparent;
+  color: var(--unal-text-dark);
 }
 
 .directorio-search__input:focus {
-  border-color: var(--unal-green-primary);
-  box-shadow: 0 0 0 0.2rem rgba(69, 179, 143, 0.25);
+  outline: none;
 }
 
 .directorio-search__btn {
-  position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%);
   background: var(--unal-green-primary);
-  color: var(--unal-white);
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  padding: 0 18px;
+  height: 48px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .directorio-search__btn:hover {
-  background: #3a9d7a;
+  background: #3a9a7a;
 }
 
 .directorio-search__icon {
-  width: 16px;
-  height: 16px;
-  filter: brightness(0) invert(1);
+  width: 24px;
+  height: 24px;
 }
 
+/* Filtros */
+
 .directorio-filter__select {
-  background: var(--unal-green-primary);
-  color: var(--unal-white);
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-weight: 500;
+  border-radius: 30px;
+  border: 2px solid var(--unal-green-primary);
+  padding: 14px 28px;
+  font-family: 'Ancizar Sans', sans-serif;
+  font-size: 16px;
+  background: #fff;
+  color: var(--unal-text-dark);
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(69,179,143,0.08);
 }
 
 .directorio-filter__select:focus {
-  background: #3a9d7a;
-  color: var(--unal-white);
-  box-shadow: none;
+  border-color: var(--unal-green-primary);
+  box-shadow: 0 0 0 0.2rem rgba(69, 179, 143, 0.18);
 }
 
-/* ========================================
-   DIRECTORIO - TABLA
-======================================== */
+/* Tabla del directorio */
+
 .directorio-content {
-  background: var(--unal-white);
-  width: 100vw !important;
-  margin: 0 !important;
-  margin-left: calc(-50vw + 50%) !important;
-  margin-right: calc(-50vw + 50%) !important;
-}
-
-.directorio-content .container {
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }
 
 .directorio-table-container {
-  background: var(--unal-white);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 6px 32px rgba(69,179,143,0.14);
+  overflow-x: auto;
+  padding: 0;
 }
 
 .directorio-table {
-  margin-bottom: 0;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
 }
 
 .directorio-table thead th {
-  background: var(--unal-white);
-  color: var(--unal-green-primary);
-  font-weight: 600;
-  border-bottom: 2px solid var(--unal-border);
-  padding: 20px 15px;
-  font-size: 0.95rem;
+  background: var(--unal-green-primary);
+  color: #fff;
+  padding: 18px 24px;
+  font-weight: 700;
+  font-family: 'Ancizar Sans', sans-serif;
+  text-align: left;
+  border: none;
+  font-size: 18px;
 }
 
 .directorio-table tbody td {
-  padding: 15px;
+  padding: 16px 24px;
   border-bottom: 1px solid var(--unal-border);
+  font-family: 'Ancizar Sans', sans-serif;
   color: var(--unal-text-dark);
+  font-size: 16px;
+}
+
+.directorio-table tbody tr {
+  transition: background 0.2s;
 }
 
 .directorio-table tbody tr:hover {
   background: var(--unal-green-light);
 }
 
-/* ========================================
-   DIRECTORIO - PAGINACIÓN
-======================================== */
+.directorio-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Paginación */
 .directorio-pagination {
   margin-top: 30px;
 }
@@ -330,18 +588,22 @@ main.detalle {
 }
 
 .directorio-pagination__btn {
-  background: var(--unal-white);
-  border: 1px solid var(--unal-border);
+  background: #ffffff;
+  border: 2px solid var(--unal-green-primary);
   color: var(--unal-green-primary);
+  padding: 10px 20px;
   border-radius: 25px;
-  padding: 8px 16px;
-  font-size: 0.9rem;
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   transition: all 0.3s ease;
 }
 
 .directorio-pagination__btn:hover:not(:disabled) {
   background: var(--unal-green-primary);
-  color: var(--unal-white);
+  color: #ffffff;
 }
 
 .directorio-pagination__btn:disabled {
@@ -349,201 +611,111 @@ main.detalle {
   cursor: not-allowed;
 }
 
-.directorio-pagination__info {
-  color: var(--unal-text-light);
-  font-size: 0.9rem;
-}
-
-.directorio-pagination__current {
-  background: var(--unal-green-primary);
-  color: var(--unal-white);
-  padding: 4px 8px;
-  border-radius: 50%;
-  font-weight: 600;
-  margin: 0 5px;
-}
-
 .directorio-pagination__arrow {
-  width: 12px;
-  height: 12px;
-  filter: brightness(0) saturate(100%) invert(56%) sepia(84%) saturate(370%) hue-rotate(120deg) brightness(95%) contrast(89%);
-}
-
-.directorio-pagination__arrow--left {
-  transform: rotate(180deg);
-  margin-right: 5px;
+  width: 16px;
+  height: 16px;
 }
 
 .directorio-pagination__arrow--right {
-  margin-left: 5px;
+  transform: rotate(180deg);
 }
 
-.directorio-pagination__btn:hover:not(:disabled) .directorio-pagination__arrow {
-  filter: brightness(0) invert(1);
+.directorio-pagination__info {
+  font-family: 'Ancizar Sans', sans-serif;
+  color: var(--unal-text-dark);
+  font-weight: 500;
 }
 
-/* ========================================
-   DIRECTORIO - SECCIÓN DE CONTACTO
-======================================== */
+.directorio-pagination__current {
+  color: var(--unal-green-primary);
+  font-weight: 700;
+}
+
+/* Sección de contacto */
 .directorio-contact {
-  background: var(--unal-dark-bg);
+  background: var(--unal-green-light);
   padding: 60px 0;
-  color: var(--unal-white);
-  width: 100vw !important;
-  margin: 0 !important;
-  margin-left: calc(-50vw + 50%) !important;
-  margin-right: calc(-50vw + 50%) !important;
-}
-
-.directorio-contact .container {
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
 }
 
 .directorio-contact__card {
-  background: rgba(255, 255, 255, 0.1);
+  background: #ffffff;
   border-radius: 15px;
   padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   height: 100%;
-  backdrop-filter: blur(10px);
 }
 
 .directorio-contact__card--small {
-  padding: 20px;
+  padding: 25px;
 }
 
 .directorio-contact__header h3 {
   color: var(--unal-green-primary);
-  font-family: 'Ancizar serif', serif;
-  font-size: 1.5rem;
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.directorio-contact__card--small h4 {
+  color: var(--unal-green-primary);
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 600;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .directorio-contact__item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 20px;
   gap: 15px;
+  margin-bottom: 20px;
 }
 
 .directorio-contact__icon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
   margin-top: 2px;
-  min-width: 20px;
-  filter: brightness(0) saturate(100%) invert(56%) sepia(84%) saturate(370%) hue-rotate(120deg) brightness(95%) contrast(89%);
+}
+
+.directorio-contact__item div {
+  font-family: 'Ancizar Sans', sans-serif;
+  color: var(--unal-text-dark);
+  line-height: 1.5;
 }
 
 .directorio-contact__chat-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 15px;
-  color: var(--unal-green-primary);
+  font-family: 'Ancizar Sans', sans-serif;
+  color: var(--unal-text-dark);
 }
 
 .directorio-contact__chat-icon {
-  width: 16px;
-  height: 16px;
-  filter: brightness(0) saturate(100%) invert(56%) sepia(84%) saturate(370%) hue-rotate(120deg) brightness(95%) contrast(89%);
+  width: 20px;
+  height: 20px;
 }
 
 .directorio-contact__btn {
   background: var(--unal-green-primary);
   border: none;
   border-radius: 10px;
-  width: 40px;
-  height: 40px;
+  padding: 15px;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: var(--unal-white);
-  margin-top: 10px;
+  align-items: center;
+  transition: background 0.3s ease;
 }
 
 .directorio-contact__btn:hover {
-  background: #3a9d7a;
+  background: #3a9a7a;
 }
 
 .directorio-contact__btn-icon {
-  width: 20px;
-  height: 20px;
-  filter: brightness(0) invert(1);
-}
-
-/* ========================================
-   DIRECTORIO - RESPONSIVE
-======================================== */
-@media (max-width: 768px) {
-  .directorio-hero__title {
-    font-size: 2.5rem;
-  }
-  
-  .directorio-hero__content {
-    padding-left: 15px;
-  }
-  
-  .directorio-hero .container-fluid {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  
-  .directorio-hero__description {
-    padding-left: 0;
-    padding-right: 15px;
-    margin-top: 2rem;
-  }
-  
-  .directorio-nav__menu {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .directorio-nav__item {
-    font-size: 0.8rem;
-  }
-  
-  .directorio-table-container {
-    overflow-x: auto;
-  }
-  
-  .directorio-table {
-    min-width: 600px;
-  }
-  
-  .directorio-search .container,
-  .directorio-content .container,
-  .directorio-contact .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .directorio-hero {
-    padding: 40px 0;
-  }
-  
-  .directorio-hero__title {
-    font-size: 2rem;
-  }
-  
-  .directorio-search__input {
-    padding: 10px 40px 10px 15px;
-  }
-  
-  .directorio-contact {
-    padding: 40px 0;
-  }
-}
-
-#letrasdfa2 {
-   color: #fff;
-    font-size: 16px;
-    font-family: 'Ancizar sans';
-    font-style: normal;
-    padding: 10px 5% 10px 0px;
-    text-align: right;
-    background: rgba(69, 179, 143, 1);
+  width: 40px;
+  height: 40px;
 }
