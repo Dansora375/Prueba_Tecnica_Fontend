@@ -1,0 +1,45 @@
+<!-- Sección de búsqueda y filtros -->
+<section class="directorio-search ">
+  <!-- Menú de navegación horizontal -->
+  <section class="directorio-menu">
+  <div class="directorio-nav__menu">
+    <a href="#" class="directorio-nav__item active">Dirección Financiera y Administrativa</a>
+    <a href="#" class="directorio-nav__item">Noticias</a>
+    <a href="#" class="directorio-nav__item">Comunicados</a>
+    <a href="#" class="directorio-nav__item">Préstamo Sala anexa 306 A</a>
+    <a href="#" class="directorio-nav__item">Rendición de cuentas</a>
+    <a href="#" class="directorio-nav__item">Servicios</a>
+    <a href="#" class="directorio-nav__item">Directorio</a>
+  </div>
+</section>
+
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="directorio-search__container">
+          <div class="directorio-search__input-group">
+            <input type="text" class="directorio-search__input" placeholder="Buscar un contacto de la Dirección Financiera y Administrativa Sede Bogotá" id="searchInput">
+            
+          </div>
+          <button class="directorio-search__btn" type="button" onclick="searchDirectory()">
+              <svg class="directorio-search__icon" fill="white" viewBox="0 0 22 22">
+              </svg>
+            </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-3 ">
+      <div class="col-md-4">
+        <select class="directorio-filter__select" id="divisionFilter" onchange="filterByDivision()">
+          <option value="">División/Sección</option>
+          <option value="Dirección Financiera">Dirección Financiera</option>
+          <option value="Dirección Administrativa">Dirección Administrativa</option>
+          <option value="Contabilidad">Contabilidad</option>
+          <option value="Presupuesto">Presupuesto</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
