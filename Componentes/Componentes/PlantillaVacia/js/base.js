@@ -4,7 +4,7 @@
 
 (function () {
   const scripts = [
-    'js/components/directoryData.js',
+    'js/utils/directoryData.js',
     'js/components/state.js',
     'js/components/render.js',
     'js/components/actions.js',
