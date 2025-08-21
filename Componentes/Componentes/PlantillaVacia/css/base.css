@@ -10,13 +10,6 @@
   --dl-color-theme-secondary2: #FBF1EB;
   --dl-color-theme-neutral-dark: #191818;
   --dl-color-theme-neutral-light: #FBFAF9;
-  --dl-layout-size-maxwidth: 1400px;
-  --dl-layout-space-unit: 16px;
-  --dl-layout-space-twounits: 32px;
-  --dl-layout-space-threeunits: 48px;
-  --dl-layout-space-fourunits: 64px;
-  --dl-layout-space-fiveunits: 80px;
-  --dl-layout-radius-cardradius: 8px;
   --unal-green-primary: #45b38f;
   --unal-green-light: rgba(69, 179, 143, 0.1);
   --unal-text-dark: #333333;
@@ -106,36 +99,6 @@
   position: absolute;
   object-fit: cover;
 }
-
-/* Barra superior verde */
-.directorio-rectangle2 {
-  top: -38px;
-  left: -10%;
-  width: 120%;
-  height: 38px;
-  z-index: 4;
-  position: absolute;
-  background-color: var(--unal-green-primary);
-}
-
-/* Texto "Dirección Financiera y Administrativa - Sede Bogotá" */
-.directorio-text10 {
-  top: -33px;
-  right: 10%;
-  color: var(--dl-color-theme-accent1);
-  width: auto;
-  max-width: 50%;
-  height: auto;
-  z-index: 5;
-  position: absolute;
-  font-size: clamp(14px, 1.2vw, 20px);
-  font-style: normal;
-  text-align: right;
-  font-family: 'Ancizar Sans', sans-serif;
-  font-weight: 400;
-  line-height: 120%;
-}
-
 /* Título "Directorio" */
 .directorio-text11 {
   top: 20px;
@@ -152,6 +115,9 @@
   font-weight: 700;
   line-height: 120%;
 }
+
+
+
 
 /* Descripción del directorio */
 .directorio-text14 {
@@ -171,46 +137,6 @@
   line-height: 120%;
 }
 
-/* Elementos gráficos decorativos del hero - responsivos */
-
-
-.directorio-ellipse5 {
-  top: 15%;
-  left: 35%;
-  width: clamp(120px, 15vw, 200px);
-  height: auto;
-  z-index: 3;
-  position: absolute;
-}
-
-/* Polígonos decorativos - responsivos */
-.directorio-polygon {
-  position: absolute;
-  z-index: 3;
-  width: clamp(30px, 4vw, 60px);
-  height: auto;
-}
-
-.directorio-polygon51 {
-  top: 10%;
-  right: 8%;
-}
-
-.directorio-polygon52 {
-  top: 35%;
-  right: 15%;
-}
-
-.directorio-polygon53 {
-  top: 55%;
-  right: 25%;
-}
-
-.directorio-polygon6 {
-  top: 25%;
-  right: 12%;
-}
-
 /* Media queries para responsividad */
 @media (max-width: 768px) {
   .directorio-hero {
@@ -218,29 +144,17 @@
     flex-direction: column;
     padding: 40px 5% 30px 5%;
   }
-  
-  .directorio-text11 {
+.directorio-text11 {
     top: 60px;
     left: 5%;
     width: 90%;
     text-align: center;
-  }
-  
+  }  
   .directorio-text14 {
     top: 140px;
     left: 5%;
     width: 90%;
     text-align: center;
-  }
-  
-  .directorio-text10 {
-    right: 15px;
-    max-width: 70%;
-  }
-  
-  .directorio-ellipse5 {
-    top: 25%;
-    left: 20%;
   }
   
   .directorio-nav__menu {
@@ -271,17 +185,11 @@
     min-height: 350px;
     padding: 30px 2% 20px 2%;
   }
-  
   .directorio-text11 {
     top: 50px;
-  }
-  
+  }  
   .directorio-text14 {
     top: 120px;
-  }
-  
-  .directorio-polygon {
-    width: clamp(20px, 3vw, 40px);
   }
   
   .directorio-nav__item {
@@ -293,11 +201,11 @@
 }
 
 /* ========================================
-   DIRECTORIO - NAVEGACIÓN HORIZONTAL (Compatible con unal.css)
+   DIRECTORIO - NAVEGACIÓN HORIZONTAL 
 ======================================== */
 .directorio-menu {
   width: 60vw;
-  background: rgba(69, 179, 143, 0.95);
+  background: var(--unal-green-primary);
   border-radius: 50px;
   padding: 20px 0;
   backdrop-filter: blur(10px);
@@ -321,7 +229,7 @@
 } 
 
 .directorio-nav__item {
-  color: #ffffff;
+  color: var(--unal-background);
   text-decoration: none;
   border-radius: clamp(15px, 4vw, 25px);
   font-size: clamp(11px, 2vw, 14px);
@@ -383,7 +291,7 @@
   border-radius: 30px;
   background: var(--unal-background-search-input);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--unal-background);
   padding: 0px 16px;
 }
 
@@ -453,12 +361,11 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   cursor: pointer;
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-image: url('../images/directorio_images/vector17i125-k.svg');
   background-repeat: no-repeat;
   background-position: right 15px center;
   background-size: 16px;
   padding-right: 45px;
-  justify-content: left;
 }
 
 .directorio-filter__select:focus {
@@ -579,7 +486,7 @@
 }
 .directorio-pagination__btn img {
   display: inline-block;
-  width: 20px; /* ajustar si hace falta */
+  width: 20px;
   height: 20px;
   transition: filter 0.25s ease, transform 0.2s ease, opacity 0.2s ease;
   filter: none;
@@ -588,14 +495,6 @@
 .directorio-pagination__btn:hover img {
   filter: brightness(0.8);
   transform: scale(1.5);
-}
-.directorio-pagination__arrow {
-  width: 16px;
-  height: 16px;
-}
-
-.directorio-pagination__arrow--right {
-  transform: rotate(180deg);
 }
 
 .directorio-pagination__info {
@@ -652,6 +551,8 @@
   background: var(--unal-background);
   width: 100%;
 }
+
+
 
 .directorio-contact__card--small {
   background: var(--unal-background);
@@ -763,46 +664,6 @@
   height: 30px;
 }
 
-/* ========================================
-   CLASES RESPONSIVAS PERSONALIZADAS
-======================================== */
-
-/* Clase responsive para espaciado entre columnas */
-.responsive-spacing {
-  margin-bottom: clamp(8px, 2vw, 24px);
-}
-
-/* Media queries para espaciado responsive */
-@media (min-width: 1200px) {
-  .responsive-spacing {
-    margin-bottom: 24px;
-  }
-}
-
-@media (max-width: 1199px) and (min-width: 992px) {
-  .responsive-spacing {
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 991px) and (min-width: 768px) {
-  .responsive-spacing {
-    margin-bottom: 16px;
-  }
-}
-
-@media (max-width: 767px) and (min-width: 576px) {
-  .responsive-spacing {
-    margin-bottom: 12px;
-  }
-}
-
-@media (max-width: 575px) {
-  .responsive-spacing {
-    margin-bottom: 8px;
-  }
-}
-
 /* Media queries específicas para pantallas muy grandes */
 @media (min-width: 1600px) {
   .directorio-contact .container {
@@ -811,12 +672,12 @@
   }
   
   .directorio-contact__card {
-    max-width: 600px; /* Limitar ancho de las tarjetas */
+    max-width: 600px;
   }
   
   .directorio-contact__card--small {
     max-width: 100%;
-    margin: 0 auto 20px auto; /* Centrar las tarjetas pequeñas */
+    margin: 0 auto 20px auto;
   }
 }
 
@@ -827,14 +688,10 @@
   }
   
   .directorio-contact {
-    padding: 60px 0; /* Más padding en pantallas muy grandes */
+    padding: 60px 0;
   }
   
   .directorio-contact__card {
     max-width: 700px;
   }
 }
-
-/* ========================================
-   FIN CLASES RESPONSIVAS
-======================================== */
