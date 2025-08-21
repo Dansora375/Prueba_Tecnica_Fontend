@@ -7,7 +7,7 @@
     'js/utils/directoryData.js',
     'js/components/state.js',
     'js/components/render.js',
-    'js/components/actions.js',
+    'js/modules/actions.js',
     'js/components/init.js'
   ];
 

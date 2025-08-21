@@ -3,7 +3,7 @@
 ======================================== */
 
 /* Importar todos los módulos de componentes */
-@import url('components/variables.css');
+@import url('base/variables.css');
 @import url('components/layout.css');
 @import url('components/hero.css');
 @import url('components/navigation.css');
