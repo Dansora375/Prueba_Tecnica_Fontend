@@ -1,9 +1,13 @@
-#letrasdfa2 {
-   color: #fff;
-    font-size: 16px;
-    font-family: 'Ancizar sans';
-    font-style: normal;
-    padding: 10px 5% 10px 0px;
-    text-align: right;
-    background: rgba(69, 179, 143, 1);
-}
+/* ========================================
+   DIRECTORIO - ESTILOS MODULARIZADOS
+======================================== */
+
+/* Importar todos los módulos de componentes */
+@import url('base/variables.css');
+@import url('components/layout.css');
+@import url('components/hero.css');
+@import url('components/navigation.css');
+@import url('components/search.css');
+@import url('components/table.css');
+@import url('components/contact.css');
+@import url('components/responsive.css');

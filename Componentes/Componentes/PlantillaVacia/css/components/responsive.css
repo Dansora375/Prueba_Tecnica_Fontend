@@ -1,0 +1,100 @@
+/* Media queries para responsividad */
+@media (max-width: 1440px) {
+    .directorio-agencia-unal020223181{
+      top: 0px;
+    }
+  }
+
+@media (max-width: 768px) {
+  .directorio-hero {
+    min-height: 400px;
+    flex-direction: column;
+    padding: 40px 5% 30px 5%;
+  }
+.directorio-text11 {
+    top: 60px;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+  }  
+  .directorio-text14 {
+    top: 140px;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .directorio-nav__menu {
+    gap: 15px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  .directorio-nav__item {
+    font-size: 14px;
+    padding: 10px 18px;
+    min-width: 100px;
+    border-radius: 20px;
+  }
+  
+  .directorio-table-container {
+    overflow-x: auto;
+  }
+  
+  .directorio-table {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .directorio-hero {
+    min-height: 350px;
+    padding: 30px 2% 20px 2%;
+  }
+  .directorio-text11 {
+    top: 50px;
+  }  
+  .directorio-text14 {
+    top: 120px;
+  }
+  
+  .directorio-nav__item {
+    font-size: 12px;
+    padding: 8px 14px;
+    min-width: 80px;
+    border-radius: 15px;
+  }
+}
+
+/* Media queries específicas para pantallas muy grandes */
+@media (min-width: 1600px) {
+  .directorio-contact .container {
+    max-width: 1600px;
+    padding: 0 60px;
+  }
+  
+  .directorio-contact__card {
+    max-width: 600px;
+  }
+  
+  .directorio-contact__card--small {
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+  }
+}
+
+@media (min-width: 1920px) {
+  .directorio-contact .container {
+    max-width: 1800px;
+    padding: 0 100px;
+  }
+  
+  .directorio-contact {
+    padding: 60px 0;
+  }
+  
+  .directorio-contact__card {
+    max-width: 700px;
+  }
+}

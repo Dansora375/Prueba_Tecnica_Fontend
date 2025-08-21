@@ -1,0 +1,132 @@
+/* Tabla del directorio */
+
+.directorio-content {
+  width: 100vw;
+  background: var(--unal-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.directorio-table-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+ 
+  border-radius: 32px;
+  overflow-x: auto;
+  padding: 0;
+  border: none;
+}
+
+/* Estilos limpios para la tabla del directorio */
+.directorio-table {
+  border-collapse: collapse;
+  width: 100%;
+  background: transparent;
+}
+
+.directorio-table thead th {
+  color: var(--unal-green-primary);
+  font-weight: 600;
+  font-family: 'Ancizar Sans', sans-serif;
+  padding: 16px 24px;
+  text-align: center;
+  border: none;
+  font-size: 16px; 
+  background: var(--unal-background);
+}
+
+.directorio-table th,
+.directorio-table td {
+  border: none;
+  padding: 16px 24px;
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Ancizar Sans', sans-serif;
+}
+
+.directorio-table tbody td {
+  padding: 16px 24px;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  font-family: 'Ancizar Sans', sans-serif;
+  color: var(--unal-text-dark);
+  font-size: 16px;
+  background: var(--unal-background);
+  outline: none;
+}
+
+.directorio-table tbody tr {
+  transition: background 0.2s;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.directorio-table tbody tr:hover {
+  background: var(--unal-green-light);
+}
+
+.directorio-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Paginación */
+.directorio-pagination {
+  margin-top: 30px;
+}
+
+.directorio-pagination__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.directorio-pagination__btn {
+  background: var(--unal-background);
+  border: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.directorio-pagination__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.directorio-pagination__btn img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  transition: filter 0.25s ease, transform 0.2s ease, opacity 0.2s ease;
+  filter: none;
+}
+
+.directorio-pagination__btn:hover img {
+  filter: brightness(0.8);
+  transform: scale(1.5);
+}
+
+.directorio-pagination__info {
+  font-family: 'Ancizar Sans', sans-serif;
+  color: var(--unal-green-primary);
+  font-weight: 500;
+}
+
+.directorio-pagination__current {
+  color: var(--unal-green-primary);
+  border: 2px solid var(--unal-green-primary);
+  padding: 0.45rem 0.55rem;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  display: inline-block;
+  border-radius: 40rem;
+}
