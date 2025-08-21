@@ -1,0 +1,144 @@
+/* Sección de contacto */
+.directorio-contact {
+  background: var(--unal-dark-bg);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.directorio-contact .container {
+  max-width: 1400px; /* Limitar ancho máximo */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.directorio-contact__card {
+  background: var(--unal-green-primary);
+  border-radius: 15px;
+  padding-left: clamp(130px, 15vw, 520px); /* Padding responsive para la barra verde */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  min-height: 180px; /* Altura mínima */
+  max-width: 100%; /* Limitar ancho máximo */
+  position: relative; /* Para posicionamiento del rectángulo verde */
+}
+
+.directorio-contact_info{
+  padding: clamp(16px, 3vw, 32px); /* Padding responsive */
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: var(--unal-background);
+  width: 100%;
+}
+
+.directorio-contact__card--small {
+  background: var(--unal-background);
+  border-radius: 15px;
+  padding: clamp(20px, 3vw, 40px); /* Padding responsive */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.directorio-contact__card--inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  min-height: auto;
+  height: 40%;
+}
+
+.directorio-contact__card--inline h4 {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.directorio-contact__card--inline button {
+  margin-left: 16px;
+}
+.directorio-contact__header h3 {
+  color: var(--unal-green-primary);
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.directorio-contact__card--small h4 {
+  color: var(--unal-green-primary);
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 600;
+  margin-bottom: 16px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.directorio-contact__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.directorio-contact__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.directorio-contact__item div {
+  font-family: 'Ancizar Sans', sans-serif;
+  color: var(--unal-green-primary);
+  line-height: 1.5;
+}
+
+.directorio-contact__chat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-family: 'Ancizar Sans', sans-serif;
+  color: var(--unal-green-primary);
+  font-size: 16px;
+  padding: 8px 0;
+}
+
+.directorio-contact__chat-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.directorio-contact__btn {
+  border: none;
+  border-radius: 15px;
+  padding: 15px 20px;
+  min-width: 120px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.directorio-contact__btn:hover {
+  filter: brightness(4) invert(1); 
+  transform: translateY(-2px);
+}
+
+.directorio-contact__btn-icon {
+  width: 30px;
+  height: 30px;
+}

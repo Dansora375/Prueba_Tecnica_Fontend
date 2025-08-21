@@ -1,0 +1,84 @@
+/* ========================================
+   DIRECTORIO - HERO SECTION 
+======================================== */
+.directorio-hero {
+  width: 100vw;
+  height: 25vw;
+  min-height: 500px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  background-color: var(--unal-background);
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 60px 10% 40px 10%;
+  /* object-fit: cover; */
+}
+
+/* Imagenes de fondo decorativas - responsivas */
+.directorio-agencia-unal020223181 {
+  top: -200px;
+  left: -0.5%;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.directorio-directorio12x1 {
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: auto ;
+  z-index: 1;
+  position: absolute;
+  object-fit: cover;
+}
+
+.directorio-directorio22x1 {
+  top: -10px;
+  left: -10px;
+
+  max-width: 100%;
+  height: auto ;
+  z-index: 2;
+  position: absolute;
+  object-fit: cover;
+}
+
+/* Título "Directorio" */
+.directorio-text11 {
+  top: 20px;
+  left: 5%;
+  color: var(--dl-color-theme-neutral-dark);
+  width: 40%;
+  height: auto;
+  z-index: 6;
+  position: absolute;
+  font-size: clamp(48px, 6vw, 78px);
+  font-style: normal;
+  text-align: left;
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+/* Descripción del directorio */
+.directorio-text14 {
+  top: 20px;
+  right: 5%;
+  left: 50%;
+  color: var(--dl-color-theme-neutral-dark);
+  width: 45%;
+  height: auto;
+  z-index: 7;
+  position: absolute;
+  font-size: clamp(18px, 2vw, 26px);
+  font-style: normal;
+  text-align: left;
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 400;
+  line-height: 120%;
+}

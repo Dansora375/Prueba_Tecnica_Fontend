@@ -1,0 +1,23 @@
+/* ========================================
+   DIRECTORIO - VARIABLES CSS (Figma Based)
+======================================== */
+:root {
+  --dl-color-theme-primary1: #BF4408;
+  --dl-color-theme-primary2: #E65103;
+  --dl-color-theme-accent1: #FFFFFF;
+  --dl-color-theme-accent2: #F5D1B0;
+  --dl-color-theme-secondary1: #FFFFFF;
+  --dl-color-theme-secondary2: #FBF1EB;
+  --dl-color-theme-neutral-dark: #191818;
+  --dl-color-theme-neutral-light: #FBFAF9;
+  --unal-green-primary: #45b38f;
+  --unal-green-light: rgba(69, 179, 143, 0.1);
+  --unal-text-dark: #333333;
+  --unal-text-light: #666666;
+  --unal-border: #e0e0e0;
+  --unal-white: #ffffff;
+  --unal-background: #F1F7F7;
+  --unal-background-search-input: #D9E5ED;
+  --unal-footer-bg: #052222;
+  --unal-dark-bg: #1a2e2e;
+}
